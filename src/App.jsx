@@ -107,33 +107,65 @@
 
 
 // One Step Ahead
+// Abour Scope
 
-import React, { useRef } from 'react'
-import {useGSAP} from '@gsap/react'
+// import React, { useRef } from 'react'
+// import {useGSAP} from '@gsap/react'
+// import gsap from 'gsap';
+
+// const App = () => {
+//   const boxRef = useRef();
+//   const circleRef = useRef();
+//   useGSAP(()=>{
+//     gsap.to(".box",{
+//       rotate:360,
+//       duration:1.5,
+//       delay:1
+//     })
+//   },{scope:".container1"})
+//   return (
+//    <main>
+//     <div className="container1">
+//       <div className="box"></div>
+//       <div className="circle"></div>
+//     </div>
+//     <div className="container2">
+//     <div className="box"></div>
+//     <div className="circle"></div>
+//     </div>
+//    </main>
+//   )
+// }
+
+// export default App
+
+// One Step Ahead
+
+import React, { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 
 const App = () => {
-  const boxRef = useRef();
-  const circleRef = useRef();
-  useGSAP(()=>{
-    gsap.to(".box",{
-      rotate:360,
-      duration:1.5,
-      delay:1
-    })
-  },{scope:".container1"})
+  const [xmove, setMove] = useState(0);
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    if (boxRef.current) {
+      gsap.to(boxRef.current, {
+        x: xmove,
+        duration: 1,
+      });
+    }
+  }, [xmove]);
+
   return (
-   <main>
-    <div className="container1">
-      <div className="box"></div>
-      <div className="circle"></div>
-    </div>
-    <div className="container2">
-    <div className="box"></div>
-    <div className="circle"></div>
-    </div>
-   </main>
-  )
+    <main>
+      <button onClick={() => setMove(100)}>Animate Box</button>
+      <div ref={boxRef} className="box"></div>
+    </main>
+  );
 }
 
-export default App
+export default App;
+
+
+

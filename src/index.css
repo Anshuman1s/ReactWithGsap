@@ -7,19 +7,7 @@
   font-family: 'Poppins';
 } */
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins';
-  color: #fff;
-}
-html,body{
-  width: 100%;
-  height: 100%;
-}
-
-main{
+/* main{
   height: 100vh;
   background-color: #111;
   display: flex;
@@ -27,26 +15,72 @@ main{
   justify-content: center;
   gap: 100px;
   padding: 50px;
-}
-.container1,.container2{
-  border: 3px solid #fff;
-  padding: 15px;
-  border-radius: 10px;
-}
-.box{
-  height: 300px;
-  width: 300px;
-  background:linear-gradient(to right bottom, rgb(33, 181, 176),rgb(168, 75, 182));
-  border-radius: 10px;
-  margin: 10px;
-
-  
-}
-.circle{
-  height: 300px;
-  width: 300px;
-  background:linear-gradient(to right bottom, rgb(70, 70, 148),rgb(251, 251, 17));
-  border-radius: 50%;
-  margin: 20px;
-  
-}
+  }
+  .container1,.container2{
+    border: 3px solid #fff;
+    padding: 15px;
+    border-radius: 10px;
+    }
+    .box{
+      height: 300px;
+      width: 300px;
+      background:linear-gradient(to right bottom, rgb(33, 181, 176),rgb(168, 75, 182));
+      border-radius: 10px;
+      margin: 10px;
+      
+      
+      }
+      .circle{
+        height: 300px;
+        width: 300px;
+        background:linear-gradient(to right bottom, rgb(70, 70, 148),rgb(251, 251, 17));
+        border-radius: 50%;
+        margin: 20px;
+        
+        } */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins";
+          color: #fff;
+        }
+        
+        html,
+        body {
+          width: 100%;
+          height: 100%;
+        }
+        
+        main {
+          height: 100vh;
+          width: 100%;
+          background-color: #111;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 5vw;
+          border:none
+        }
+        
+        button {
+          padding: 20px 40px;
+          font-size: 25px;
+          font-weight: 700;
+          border-radius: 50px;
+          background: linear-gradient(to right bottom, lightgreen, green);
+          cursor: pointer;
+          color: black;
+        }
+        
+        .box {
+          height: 400px;
+          width: 400px;
+          background: linear-gradient(to right bottom, red, blue);
+          border-radius: 20%;
+        }
+        button:active{
+          scale: 0.8;
+        }
+        
