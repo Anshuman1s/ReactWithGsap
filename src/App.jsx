@@ -146,20 +146,21 @@ import gsap from 'gsap';
 
 const App = () => {
   const [xmove, setMove] = useState(0);
+ var random =  gsap.utils.random(-500,500,100)
   const boxRef = useRef(null);
 
   useEffect(() => {
-    if (boxRef.current) {
+    
       gsap.to(boxRef.current, {
         x: xmove,
         duration: 1,
       });
-    }
+    
   }, [xmove]);
 
   return (
     <main>
-      <button onClick={() => setMove(100)}>Animate Box</button>
+      <button onClick={() => setMove(random)}>Animate Box</button>
       <div ref={boxRef} className="box"></div>
     </main>
   );
