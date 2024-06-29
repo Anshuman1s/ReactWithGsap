@@ -69,39 +69,71 @@
 
 // ONE STEP UP
 
-import React from 'react'
-import {useGSAP} from '@gsap/react'
-import gsap from 'gsap'
-import { useRef } from 'react'
-const App = () => {
-    const boxRef = useRef()
-    const circleRef = useRef();
-    const tl = gsap.timeline()
-    useGSAP(()=>{
-    tl.to(boxRef.current,{
-      x:1000,
-      rotate:360,
-      borderRadius:"50%",
-      duration:3,
-      delay:1,
+// import React from 'react'
+// import {useGSAP} from '@gsap/react'
+// import gsap from 'gsap'
+// import { useRef } from 'react'
+// const App = () => {
+//     const boxRef = useRef()
+//     const circleRef = useRef();
+//     const tl = gsap.timeline()
+//     useGSAP(()=>{
+//     tl.to(boxRef.current,{
+//       x:1000,
+//       rotate:360,
+//       borderRadius:"50%",
+//       duration:3,
+//       delay:1,
 
-    })
-    gsap.to(circleRef.current,{
-      x:1000,
-      rotate:360,
-      borderRadius:"10px",
-      duration:3,
+//     })
+//     gsap.to(circleRef.current,{
+//       x:1000,
+//       rotate:360,
+//       borderRadius:"10px",
+//       duration:3,
      
 
+//     })
+//     })
+//   return (
+//     <div>
+//       <div ref={boxRef} className="box"></div>
+//       <div ref={circleRef} className="circle"></div>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// One Step Ahead
+
+import React, { useRef } from 'react'
+import {useGSAP} from '@gsap/react'
+import gsap from 'gsap';
+
+const App = () => {
+  const boxRef = useRef();
+  const circleRef = useRef();
+  useGSAP(()=>{
+    gsap.to(".box",{
+      rotate:360,
+      duration:1.5,
+      delay:1
     })
-    })
+  },{scope:".container1"})
   return (
-    <div>
-      <div ref={boxRef} className="box"></div>
-      <div ref={circleRef} className="circle"></div>
+   <main>
+    <div className="container1">
+      <div className="box"></div>
+      <div className="circle"></div>
     </div>
+    <div className="container2">
+    <div className="box"></div>
+    <div className="circle"></div>
+    </div>
+   </main>
   )
 }
 
 export default App
-

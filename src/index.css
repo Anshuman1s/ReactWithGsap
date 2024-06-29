@@ -18,16 +18,28 @@ html,body{
   width: 100%;
   height: 100%;
 }
-body{
-  background-color:#111;
+
+main{
+  height: 100vh;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
   padding: 50px;
 }
-
+.container1,.container2{
+  border: 3px solid #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
 .box{
   height: 300px;
   width: 300px;
   background:linear-gradient(to right bottom, rgb(33, 181, 176),rgb(168, 75, 182));
-  /* border-radius: 50%; */
+  border-radius: 10px;
+  margin: 10px;
+
   
 }
 .circle{
@@ -35,6 +47,6 @@ body{
   width: 300px;
   background:linear-gradient(to right bottom, rgb(70, 70, 148),rgb(251, 251, 17));
   border-radius: 50%;
-  margin-top: 5px;
+  margin: 20px;
   
 }
