@@ -23,10 +23,18 @@ body{
   padding: 50px;
 }
 
-.ball{
+.box{
   height: 300px;
   width: 300px;
-  background-color: aquamarine;
+  background:linear-gradient(to right bottom, rgb(33, 181, 176),rgb(168, 75, 182));
+  /* border-radius: 50%; */
+  
+}
+.circle{
+  height: 300px;
+  width: 300px;
+  background:linear-gradient(to right bottom, rgb(70, 70, 148),rgb(251, 251, 17));
   border-radius: 50%;
-  box-shadow: 5px 5px 5px red;
+  margin-top: 5px;
+  
 }
