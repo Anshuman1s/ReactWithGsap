@@ -141,32 +141,76 @@
 
 // One Step Ahead
 
-import React, { useRef, useState, useEffect } from 'react';
-import gsap from 'gsap';
+// import React, { useRef, useState, useEffect } from 'react';
+// import gsap from 'gsap';
 
+// const App = () => {
+//   const [xmove, setMove] = useState(0);
+//  var random =  gsap.utils.random(-500,500,100)
+//   const boxRef = useRef(null);
+
+//   useEffect(() => {
+    
+//       gsap.to(boxRef.current, {
+//         x: xmove,
+//         duration: 1,
+//       });
+    
+//   }, [xmove]);
+
+//   return (
+//     <main>
+//       <button onClick={() => setMove(random)}>Animate Box</button>
+//       <div ref={boxRef} className="box"></div>
+//     </main>
+//   );
+// }
+
+// export default App;
+
+// Image Animation 
+
+
+import React, { useEffect, useRef, useState } from 'react'
+ import image from './jackRemovedBack.png'
+ import coco from './coco.webp'
+ import gsap from 'gsap'
 const App = () => {
-  const [xmove, setMove] = useState(0);
- var random =  gsap.utils.random(-500,500,100)
-  const boxRef = useRef(null);
-
-  useEffect(() => {
-    
-      gsap.to(boxRef.current, {
-        x: xmove,
-        duration: 1,
-      });
-    
-  }, [xmove]);
-
+  const jackRef = useRef(null);
+  const cocoRef = useRef(null);
+  const {contextSafe} = useEffect();
+  const [Xmove,setXMove] = useState(0);
+  const [Ymove,setYMove] = useState(0);
+ const XRandom =  gsap.utils.random(-1000,1000,100)
+ const YRandom =  gsap.utils.random(-700,700,100)
+  useEffect(()=>{
+    gsap.to(cocoRef.current,{
+      x:Xmove,
+      y:Ymove,
+      duration:2,
+    })
+  },[Xmove,Ymove])
+  const moveJack = contextSafe((e)=>{
+    gsap.to(jackRef.current,{
+      x:e.clientX-500,
+      y:e.clientY-700,
+    })
+  })
   return (
-    <main>
-      <button onClick={() => setMove(random)}>Animate Box</button>
-      <div ref={boxRef} className="box"></div>
+    <main onMouseMove={(e)=>{
+      moveJack(e)
+    }}>
+      <img className='jack' ref={jackRef}  src={image} alt="" />
+      <img onClick={()=>{
+        setXMove(XRandom)
+        setXMove(YRandom)
+      }} className='coco' ref={cocoRef} src={coco} alt="" />
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
+
 
 
 
