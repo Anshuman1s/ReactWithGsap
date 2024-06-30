@@ -171,45 +171,65 @@
 // Image Animation 
 
 
-import React, { useEffect, useRef, useState } from 'react'
- import image from './jackRemovedBack.png'
- import coco from './coco.webp'
- import gsap from 'gsap'
+// import React, { useEffect, useRef, useState } from 'react'
+//  import image from './jackRemovedBack.png'
+//  import coco from './coco.webp'
+//  import gsap from 'gsap'
+// const App = () => {
+//   const jackRef = useRef(null);
+//   const cocoRef = useRef(null);
+//   const {contextSafe} = useEffect();
+//   const [Xmove,setXMove] = useState(0);
+//   const [Ymove,setYMove] = useState(0);
+//  const XRandom =  gsap.utils.random(-1000,1000,100)
+//  const YRandom =  gsap.utils.random(-700,700,100)
+//   useEffect(()=>{
+//     gsap.to(cocoRef.current,{
+//       x:Xmove,
+//       y:Ymove,
+//       duration:2,
+//     })
+//   },[Xmove,Ymove])
+//   const moveJack = contextSafe((e)=>{
+//     gsap.to(jackRef.current,{
+//       x:e.clientX-500,
+//       y:e.clientY-700,
+//     })
+//   })
+//   return (
+//     <main onMouseMove={(e)=>{
+//       moveJack(e)
+//     }}>
+//       <img className='jack' ref={jackRef}  src={image} alt="" />
+//       <img onClick={()=>{
+//         setXMove(XRandom)
+//         setXMove(YRandom)
+//       }} className='coco' ref={cocoRef} src={coco} alt="" />
+//     </main>
+//   )
+// }
+
+// export default App
+
+import React from 'react'
+import NavBar from './Components/Navbar/NavBar'
+import CenterText from './Components/Center/CenterText'
+import LoadParent from './Components/Loading/LoadParent'
+
 const App = () => {
-  const jackRef = useRef(null);
-  const cocoRef = useRef(null);
-  const {contextSafe} = useEffect();
-  const [Xmove,setXMove] = useState(0);
-  const [Ymove,setYMove] = useState(0);
- const XRandom =  gsap.utils.random(-1000,1000,100)
- const YRandom =  gsap.utils.random(-700,700,100)
-  useEffect(()=>{
-    gsap.to(cocoRef.current,{
-      x:Xmove,
-      y:Ymove,
-      duration:2,
-    })
-  },[Xmove,Ymove])
-  const moveJack = contextSafe((e)=>{
-    gsap.to(jackRef.current,{
-      x:e.clientX-500,
-      y:e.clientY-700,
-    })
-  })
   return (
-    <main onMouseMove={(e)=>{
-      moveJack(e)
-    }}>
-      <img className='jack' ref={jackRef}  src={image} alt="" />
-      <img onClick={()=>{
-        setXMove(XRandom)
-        setXMove(YRandom)
-      }} className='coco' ref={cocoRef} src={coco} alt="" />
-    </main>
+    <>
+    <LoadParent/>
+    <div className='h-screen w-full  bg-cover bg-center bg-[url(https://images.prismic.io/arock-website-2023/d4147892-cb03-4582-af32-326bb109803f_AROCK-_1502.jpg?fm=webp&q=100&fit=crop)] '>
+      <NavBar/>
+      <CenterText/>
+    </div>
+    </>
   )
 }
 
 export default App
+
 
 
 

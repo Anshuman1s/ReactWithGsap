@@ -1,11 +1,12 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 *{
   font-family: 'Poppins';
-} */
+  color: #fff;
+}
 
 /* main{
   height: 100vh;
@@ -71,7 +72,7 @@
               scale: 0.8;
               }
               */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -100,4 +101,15 @@ img.jack{
 .coco{
   position: absolute;
   height:200px ;
+} */
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
 }
+html,body{
+  height: 100%;
+  width: 100%;
+} */
