@@ -3,7 +3,7 @@ import LoadChild from './LoadChild'
 
 const LoadParent = () => {
   return (
-    <div className='h-2 w-full fixed bg-red-600 '>
+    <div className='h-1 w-full fixed bg-transparent z-50'>
       <LoadChild/>
     </div>
   )
