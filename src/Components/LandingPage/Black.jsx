@@ -8,7 +8,7 @@ const Black = () => {
         gsap.to(blackRef.current,{
             y:"-100%",
             delay:1.5,
-            duration:0.8,
+            duration:0.2,
             rotate:0
         })
     
