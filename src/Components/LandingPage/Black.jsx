@@ -10,7 +10,7 @@ const Black = () => {
             delay:1.5,
             duration:0.2,
             rotate:0,
-            round:false
+            
         })
     
     })
