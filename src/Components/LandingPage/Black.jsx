@@ -15,7 +15,7 @@ const Black = () => {
     })
   return (
    <div>
-     <div ref = {blackRef} className="rotate-12 h-screen bg-[#111] w-full absolute z-20"></div>
+     <div ref = {blackRef} className="rotate-12 h-screen bg-[#111] w-full absolute z-20 "></div>
    </div>
   )
 }
