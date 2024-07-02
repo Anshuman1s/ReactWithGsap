@@ -9,7 +9,8 @@ const Black = () => {
             y:"-100%",
             delay:1.5,
             duration:0.2,
-            rotate:0
+            rotate:0,
+            round:false
         })
     
     })
