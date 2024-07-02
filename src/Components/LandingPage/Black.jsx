@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React, { useRef } from 'react'
-import {useEffect} from 'react'
+
 const Black = () => {
     const blackRef = useRef(null);
    
