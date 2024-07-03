@@ -14,6 +14,13 @@ const Home = () => {
             duration:0.5
         })
     })
+    useGSAP(()=>{
+        gsap.to(pageRef.current,{
+            opacity:1,
+            delay:2.1,
+            duration:0.5
+        })
+    })
    
     
 
