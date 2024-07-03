@@ -15,6 +15,16 @@ const Black = () => {
         })
     
     })
+    useGSAP(()=>{
+        gsap.to(blackRef.current,{
+            y:"-100%",
+            delay:1.5,
+            duration:0.2,
+            rotate:0,
+            
+        })
+    
+    })
   return (
    <div>
      <div ref = {blackRef} className="rotate-12 h-screen bg-[#111] w-full absolute z-20 "></div>
