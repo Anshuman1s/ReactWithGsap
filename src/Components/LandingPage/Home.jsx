@@ -18,7 +18,8 @@ const Home = () => {
         gsap.to(pageRef.current,{
             opacity:1,
             delay:2.1,
-            duration:0.5
+            duration:0.6,
+            x:500,
         })
     })
    
