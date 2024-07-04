@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import NavBar from '../Navbar/NavBar'
 import CenterText from '../Center/CenterText'
 import { useGSAP } from '@gsap/react'
@@ -22,8 +22,8 @@ const Home = () => {
         })
     })
    
-    
-
+  
+    const [data,setData] = useState(0);
   return (
     <div className=''>
         <Black/>
